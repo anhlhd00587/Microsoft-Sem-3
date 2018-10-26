@@ -1,0 +1,1 @@
+D:\MS\GridsRowsColums\GridsRowsColums\GridsRowsColums.csproj;x86
