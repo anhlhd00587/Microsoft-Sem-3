@@ -1,0 +1,190 @@
+﻿<Page
+    x:Class="MicrosoftNew.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MicrosoftNew"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <RelativePanel>
+            <Button Name="TodayButton" RelativePanel.AlignBottomWithPanel="False"
+                 FontFamily="Segoe MDL2 Assets"   
+                 FontSize="20"
+                 Content="&#xE700;"   
+                 Click="TodayButton_Click"   
+                    />
+
+            <Button Name="EditButton"
+                 FontFamily="Segoe MDL2 Assets"   
+                 FontSize="20"
+                 Content="&#xE70F;"
+                 HorizontalAlignment="Left" 
+                 Margin="400,0,0,0" 
+                 VerticalAlignment="Bottom"  
+                 Click="EditButton_Click" RenderTransformOrigin="-1.411,0.479" Height="32"
+                    />
+            <Button Name="ThemeButton"
+                 FontFamily="Segoe MDL2 Assets"   
+                 FontSize="20"
+                 Content="&#xEC46;"
+                 HorizontalAlignment="Left" 
+                 Margin="450,0,0,0" 
+                 VerticalAlignment="Bottom"
+               Click="ThemeButton_Click"
+                    />
+            <Button Name="SeeMore"
+                 FontFamily="Segoe MDL2 Assets"   
+                 FontSize="20"
+                 Content="&#xE712;"
+                 HorizontalAlignment="Left" 
+                 Margin="500,0,0,0" 
+                 VerticalAlignment="Bottom"
+               Click="SeeMore_Click"
+                    />
+
+            <Button Name="SearchButton"
+                    RelativePanel.AlignRightWithPanel="True"
+                    FontFamily=" Segoe MDL2 Assets"
+                    FontSize="20"
+                    Content="&#xE1A3;"
+                   
+                    />
+            <TextBox Name="SearchTextBox"
+                     RelativePanel.LeftOf="SearchButton"
+                     Width="200"
+                     FontSize="15"
+                     PlaceholderText="Search" Margin="0,0,0,30" 
+                     />
+
+        </RelativePanel>
+        <SplitView
+            Name="MySplitView"
+                   DisplayMode="CompactOverlay"
+                   OpenPaneLength="350"
+                   CompactPaneLength="40" HorizontalAlignment="Stretch" Margin="0,31,0,0" Grid.RowSpan="2" VerticalAlignment="Stretch">
+            <SplitView.Pane>
+                <ListBox SelectionMode="Single"
+                    SelectionChanged="ListBox_SelectionChanged">
+                    <ListBoxItem Name="Today">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets"
+                                       FontSize="20"
+                                       Text="&#xE80F;"/>
+                            <TextBlock FontSize="20"
+                                       Margin="20,0,0,0"
+                                       >
+                                Today
+                            </TextBlock>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="Interests">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets"
+                                       FontSize="20"
+                                       Text="&#xE728;"/>
+                            <TextBlock FontSize="20"
+                                       Margin="20,0,0,0"
+                                       >
+                                Interests
+                            </TextBlock>
+                        </StackPanel>
+                    </ListBoxItem>
+
+                    <ListBoxItem Name="Sources">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets"
+                                       FontSize="20"
+                                       Text="&#xF585;"/>
+                            <TextBlock FontSize="20"
+                                       Margin="20,0,0,0"
+                                       >
+                                Sources
+                            </TextBlock>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="Local">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets"
+                                       FontSize="20"
+                                       Text="&#xE707;"/>
+                            <TextBlock FontSize="20"
+                                       Margin="20,0,0,0"
+                                       >
+                                Local
+                            </TextBlock>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="Video">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets"
+                                       FontSize="20"
+                                       Text="&#xE768;"/>
+                            <TextBlock FontSize="20"
+                                       Margin="20,0,0,0"
+                                       >
+                              Video
+                            </TextBlock>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="SendFeedback">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets"
+                                       FontSize="20"
+                                       Text="&#xE76E;"/>
+                            <TextBlock FontSize="20"
+                                       Margin="20,0,0,0"
+                                       >
+                              Send Feed back
+                            </TextBlock>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="GetMicrosoftNews">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets"
+                                       FontSize="20"
+                                       Text="&#xE8EA;"/>
+                            <TextBlock FontSize="20"
+                                       Margin="20,0,0,0"
+                                       >
+                             Get Microsoft News
+                            </TextBlock>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="SinIn">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets"
+                                       FontSize="20"
+                                       Text="&#xE8FA;"/>
+                            <TextBlock FontSize="20"
+                                       Margin="20,0,0,0"
+                                       >
+                              Sin In
+                            </TextBlock>
+                        </StackPanel>
+                    </ListBoxItem>
+                    <ListBoxItem Name="Settings">
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock FontFamily="Segoe MDL2 Assets"
+                                       FontSize="20"
+                                       Text="&#xE713;" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch"/>
+                            <TextBlock FontSize="20"
+                                       Margin="20,0,0,0"
+                                       ><Run Text="Settings"/></TextBlock>
+                        </StackPanel>
+                    </ListBoxItem>
+                </ListBox>
+
+
+            </SplitView.Pane>
+
+        </SplitView>
+    </Grid>
+</Page>
