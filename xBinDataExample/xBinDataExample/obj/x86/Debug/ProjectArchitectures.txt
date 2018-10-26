@@ -1,0 +1,1 @@
+D:\MS\xBinDataExample\xBinDataExample\xBinDataExample.csproj;x86
